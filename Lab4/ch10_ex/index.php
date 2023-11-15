@@ -1,0 +1,10 @@
+$now = time();
+$new_year = strtotime('next year Jan 1st', $now);
+$seconds = $new_year - $now;
+$days = floor($seconds/86400);
+$seconds -= $days * 86400;
+$hours = floor($seconds/3600);
+$seconds -= $hours * 3600;
+$minutes = floor($seconds / 60);
+$seconds -= $minutes * 60;
+echo "$days days and $hours:$minutes:$seconds remainnig to the New Year.";
